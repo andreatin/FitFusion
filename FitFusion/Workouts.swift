@@ -58,7 +58,6 @@ struct Workouts: View {
                         Text("Leg Extensions - 3 sets, 8-12 reps")
                         Text("Calf Raises - 4 sets, Until failure")
                     }
-
                 }
             }
         }

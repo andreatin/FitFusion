@@ -54,7 +54,7 @@ struct LoginView: View {
                     HStack {
                         Image(systemName: "lock")
                             .foregroundColor(.white)
-                        TextField("Password", text: $password)
+                        SecureField("Password", text: $password)
                             .foregroundColor(.white)
                             .font(.title)
                             .fontWeight(.bold)
