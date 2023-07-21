@@ -10,7 +10,18 @@ import Firebase
 
 struct MainContent: View {
     var body: some View {
-        Text("Hello! Let's get in shape.")
+        TabView {
+            Workouts()
+            .tabItem() {
+                    Image(systemName: "figure.strengthtraining.traditional")
+                    Text("Workouts")
+            }
+            DietPlans()
+            .tabItem() {
+                    Image(systemName: "fork.knife.circle")
+                    Text("Diet Plan")
+            }
+        }.background(Color.white)
     }
 }
 
