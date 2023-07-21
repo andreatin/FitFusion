@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MainContent: View {
     var body: some View {
-        Text("Hello Cesar! Let's get in shape.")
+        Text("Hello! Let's get in shape.")
     }
 }
 

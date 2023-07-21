@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct CreateAccountView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -73,6 +74,15 @@ struct CreateAccountView: View {
                 }
                 Spacer()
                 Button(action: {
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        if let authResult = authResult {
+                            print("\(authResult.user.uid)")
+                        }
+                    }
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Create Account")

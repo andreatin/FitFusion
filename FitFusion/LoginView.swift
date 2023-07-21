@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     @State private var isCreateAccountViewPresented = false
@@ -66,7 +67,17 @@ struct LoginView: View {
                         ).padding()
                     
                     Button(action: {
-                        
+                        Auth.auth().signIn(withEmail: email, password: password) {authResult, error in
+                            if let error = error {
+                                print(error)
+                                email = ""
+                                password = ""
+                                showErrorAlert.toggle()
+                            }
+                            if let authResult = authResult {
+                                isPasswordCorrect = true
+                            }
+                        }
                     }) {
                         Text("Login")
                             .foregroundColor(.white)
@@ -90,6 +101,9 @@ struct LoginView: View {
                         Text("Create Account")
                     }.foregroundColor(.white)
                         .font(.title)
+                        .sheet(isPresented: $isCreateAccountViewPresented) {
+                            CreateAccountView()
+                        }
                     
                     Spacer()
                     Spacer()

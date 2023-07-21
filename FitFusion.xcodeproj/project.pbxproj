@@ -13,11 +13,12 @@
 		01B93A582A5DE64B00C6BAA1 /* FitFusionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B93A572A5DE64B00C6BAA1 /* FitFusionTests.swift */; };
 		01B93A622A5DE64B00C6BAA1 /* FitFusionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B93A612A5DE64B00C6BAA1 /* FitFusionUITests.swift */; };
 		01B93A642A5DE64B00C6BAA1 /* FitFusionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B93A632A5DE64B00C6BAA1 /* FitFusionUITestsLaunchTests.swift */; };
-		49206FF12A60505400954465 /* LoginPhoto.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 49206FF02A60505400954465 /* LoginPhoto.jpeg */; };
 		49206FF32A6050E400954465 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49206FF22A6050E400954465 /* LoginView.swift */; };
 		49206FF52A6054D900954465 /* MainContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49206FF42A6054D900954465 /* MainContent.swift */; };
 		49206FF82A6056AE00954465 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49206FF72A6056AE00954465 /* String.swift */; };
 		49206FFD2A605BE400954465 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49206FFC2A605BE400954465 /* CreateAccountView.swift */; };
+		494913762A60726400C7AC87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 494913752A60726400C7AC87 /* GoogleService-Info.plist */; };
+		494913792A6072E700C7AC87 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 494913782A6072E700C7AC87 /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +48,12 @@
 		01B93A5D2A5DE64B00C6BAA1 /* FitFusionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitFusionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B93A612A5DE64B00C6BAA1 /* FitFusionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitFusionUITests.swift; sourceTree = "<group>"; };
 		01B93A632A5DE64B00C6BAA1 /* FitFusionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitFusionUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		49206FF02A60505400954465 /* LoginPhoto.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LoginPhoto.jpeg; path = ../../LoginPhoto.jpeg; sourceTree = "<group>"; };
 		49206FF22A6050E400954465 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49206FF42A6054D900954465 /* MainContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContent.swift; sourceTree = "<group>"; };
 		49206FF72A6056AE00954465 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		49206FFB2A605BB900954465 /* CreateAccountPhoto.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CreateAccountPhoto.jpeg; sourceTree = "<group>"; };
 		49206FFC2A605BE400954465 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		494913752A60726400C7AC87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494913792A6072E700C7AC87 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,8 +111,8 @@
 				49206FFC2A605BE400954465 /* CreateAccountView.swift */,
 				49206FF42A6054D900954465 /* MainContent.swift */,
 				01B93A4A2A5DE64B00C6BAA1 /* Assets.xcassets */,
+				494913752A60726400C7AC87 /* GoogleService-Info.plist */,
 				49206FFB2A605BB900954465 /* CreateAccountPhoto.jpeg */,
-				49206FF02A60505400954465 /* LoginPhoto.jpeg */,
 				01B93A4C2A5DE64B00C6BAA1 /* Preview Content */,
 			);
 			path = FitFusion;
@@ -165,6 +167,9 @@
 			dependencies = (
 			);
 			name = FitFusion;
+			packageProductDependencies = (
+				494913782A6072E700C7AC87 /* FirebaseAuth */,
+			);
 			productName = FitFusion;
 			productReference = 01B93A432A5DE64B00C6BAA1 /* FitFusion.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 01B93A3A2A5DE64B00C6BAA1;
+			packageReferences = (
+				494913772A6072E700C7AC87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 01B93A442A5DE64B00C6BAA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,7 +263,7 @@
 			files = (
 				01B93A4E2A5DE64B00C6BAA1 /* Preview Assets.xcassets in Resources */,
 				01B93A4B2A5DE64B00C6BAA1 /* Assets.xcassets in Resources */,
-				49206FF12A60505400954465 /* LoginPhoto.jpeg in Resources */,
+				494913762A60726400C7AC87 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		494913772A6072E700C7AC87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		494913782A6072E700C7AC87 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 494913772A6072E700C7AC87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01B93A3B2A5DE64B00C6BAA1 /* Project object */;
 }
